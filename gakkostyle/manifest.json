@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "Twoje Rozszerzenie",
+    "version": "1.0",
+    "permissions": [
+        "activeTab",
+        "tabs",
+        "<all_urls>"
+    ],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://gakko.pjwstk.edu.pl/*"],
+            "js": ["content-script.js"],
+            "css": ["custom-style.css"]
+        }
+    ],
+    "web_accessible_resources": ["dark-mode.css"]
+}
